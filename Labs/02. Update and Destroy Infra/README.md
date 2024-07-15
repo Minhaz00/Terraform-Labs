@@ -47,7 +47,7 @@ Type `yes` when prompted to confirm the creation.
 #### Modify Terraform Configuration
 Update the Terraform configuration to change the file permissions to `20700`.
 
-```json
+```py
 # main.tf
 resource "local_file" "example" {
   filename = "/root/pets.txt"
