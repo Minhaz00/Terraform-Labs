@@ -83,16 +83,6 @@ Let's create a configuration that uses input variables.
      filename = "/root/${var.file_name}"
      content  = var.file_content
    }
-
-   output "pet_name" {
-     value       = random_pet.example.id
-     description = "The name of the randomly generated pet"
-   }
-
-   output "file_path" {
-     value       = local_file.example.filename
-     description = "The path of the created file"
-   }
    ```
 
 6. **Initialize Terraform**:
@@ -108,15 +98,13 @@ Let's create a configuration that uses input variables.
    ```
    Confirm the action by typing `yes` when prompted. After applying, you should see the output variables printed on the screen.
 
-   ![alt text](./images/image-1.png)
-
-8. **View Output Variables**:
-   You can also view the output variables using the following command:
-   ```sh
-   terraform output
+8. **View Created file**:
+   Go to root directory and use:
    ```
+   ls
+   ``` 
 
-   ![alt text](./images/image-2.png)
+   ![alt text](./images/image-7.png)
 
 ## Variable Types
 
@@ -238,14 +226,11 @@ Terraform supports various variable types to handle different data structures. L
    ```
    Confirm the action by typing `yes` when prompted.
 
-   ![alt text](./images/image-3.png)
+3. **Verify the changes**:
+   
+   Go to the root directory and use:
 
-3. **Verify the Output**:
-   Use the following command to view the output variables:
-   ```sh
-   terraform output
-   ```
-    ![alt text](./images/image-4.png)
+    ![alt text](./images/image-9.png)
 
 ### Task 2: Use Complex Variable Types
 
@@ -280,21 +265,6 @@ Terraform supports various variable types to handle different data structures. L
      filename = "/root/${var.file_name}"
      content  = var.file_content_map["statement2"]
    }
-
-   output "pet_name" {
-     value       = random_pet.example.id
-     description = "The name of the randomly generated pet"
-   }
-
-   output "file_path" {
-     value       = local_file.example.filename
-     description = "The path of the created file"
-   }
-
-   output "prefix_list_first_element" {
-     value       = var.prefix_list[0]
-     description = "The first element of the prefix list"
-   }
    ```
 
 3. **Apply the Configuration**:
@@ -303,16 +273,12 @@ Terraform supports various variable types to handle different data structures. L
    ```
    Confirm the action by typing `yes` when prompted.
 
-   ![alt text](./images/image-5.png)
 
-4. **Verify the Output**:
-   Use the following command to view the output variables, including the new `prefix_list_first_element`:
-   ```sh
-   terraform output
-   ```
+4. **Verify the Result**:
+   Go to the root directory and varify the result:
 
-   ![alt text](./images/image-6.png)
+   ![alt text](./images/image-8.png)
 
-### Conclusion
+## Conclusion
 
 In this lab, we explored how to use input variables and variable blocks in Terraform. We defined variables in a separate `variables.tf` file and used them in our main configuration file. By completing the tasks, you have gained hands-on experience with creating and using input variables, including complex variable types like lists, maps, sets, objects, and tuples. This knowledge will help you write more flexible and reusable Terraform configurations.
