@@ -138,10 +138,16 @@ terraform apply -var="filename=/root/best-pet.txt"
 
 #### 
 Terraform follows a specific order to determine which value to use when the same variable is defined in multiple places:
-1. Environment variables.
-2. `terraform.tfvars` or `terraform.tfvars.json` files.
-3. Any file ending with `.auto.tfvars` or `.auto.tfvars.json` (alphabetical order).
-4. Command line flags (`-var` or `-var-file`).
+
+
+| Order | Option                                    |
+|-------|-------------------------------------------|
+| 1     | Environment Variables                     |
+| 2     | terraform.tfvars                          |
+| 3     | *.auto.tfvars (alphabetical order)        |
+| 4     | -var or –var-file (command-line flags)    |
+|       |                                           |
+
 
 In this case, the value `/root/best-pet.txt` will be used for the `filename` variable, as command line flags take the highest precedence.
 
