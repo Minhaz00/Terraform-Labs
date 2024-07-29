@@ -6,7 +6,7 @@ In this lab, we will explore several Terraform commands that help in managing an
 You are tasked with setting up a simple Terraform configuration and then using various Terraform commands to validate, format, show the state, list providers, and refresh the state. This will help you understand how to manage and troubleshoot Terraform configurations effectively.
 
 ### Objectives:
-1. Create a simple Terraform configuration.
+1. Create a simple Terraform configurations.
 2. Validate the Terraform configuration.
 3. Format the Terraform configuration files.
 4. Show the current state of the resources.
