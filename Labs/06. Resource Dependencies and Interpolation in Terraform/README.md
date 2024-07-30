@@ -1,6 +1,6 @@
 # Resource Dependencies and Interpolation in Terraform
 
-In this lab, we will learn how to link resources using resource attributes and manage resource dependencies in Terraform. Terraform allows you to create dependencies between resources and use the output of one resource as input for another, improving the reusability and maintainability of your code.
+In this lab, we will learn how to link resources using resource attributes and manage resource dependencies in Terraform. Terraform allows you to create dependencies between resources and use the output of one resource as input for another.
 
 ### Scenario Description:
 You are tasked with managing a local file that contains the name of a randomly generated pet. The content of the file should be updated based on the output of the `random_pet` resource. You will configure implicit and explicit dependencies between resources to ensure proper ordering.
@@ -57,7 +57,7 @@ terraform init
 ```
  - The `terraform init` command initializes the directory, downloads the provider plugins (`local` and `random`), and sets up the environment for Terraform to run.
 
- - ![](./images/lab-6-1.png)
+ - ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/lab-6-1.png)
 
 ### Step 3: Applying the Configuration
 
@@ -70,12 +70,12 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
-![](./images/Screenshot%202024-07-30%20125507.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/Screenshot%202024-07-30%20125507.png)
 
 #### Verify the Resources
 After applying the configuration, verify that the resources have been created successfully.
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/2.png)
 
 ### Step 4: Understanding Implicit and Explicit Dependencies
 
