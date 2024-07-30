@@ -34,7 +34,7 @@ resource "random_pet" "my_pet" {
 }
 
 resource "local_file" "example" {
-  filename = "/root/pet_name.txt"
+  filename = "example.txt"
   content  = "My favorite pet is ${random_pet.my_pet.id}."
 }
 ```
@@ -50,6 +50,8 @@ terraform init
 
 - The `terraform init` command initializes the directory, downloads the provider plugins (`local` and `random`), and sets up the environment for Terraform to run.
 
+- ![](./images/lab-9-1.png)
+
 ### Step 3: Applying the Configuration
 
 #### Apply the Configuration
@@ -61,6 +63,8 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
+![](./images/lab-6-2.png)
+
 ### Step 4: Validating the Configuration
 
 #### Validate the Configuration
@@ -71,6 +75,8 @@ terraform validate
 ```
 
 - The `terraform validate` command ensures that the configuration is syntactically valid and highlights any errors.
+
+- ![](./images/lab-10-2.png)
 
 ### Step 5: Formatting the Configuration
 
@@ -94,6 +100,9 @@ terraform show
 
 - The `terraform show` command prints out the current state of the infrastructure, including all resource attributes.
 
+- ![](./images/lab-10-3.png)
+
+
 ### Step 7: Listing All Providers
 
 #### List All Providers
@@ -104,6 +113,9 @@ terraform providers
 ```
 
 - The `terraform providers` command lists all the providers required by the configuration.
+
+
+- ![](./images/lab-10-4.png)
 
 ### Step 8: Refreshing the State
 
@@ -116,16 +128,30 @@ terraform refresh
 
 - The `terraform refresh` command updates the state file to reflect any changes made to the resources outside of Terraform.
 
+- ![](./images/lab-10-5.png)
+
 ### Step 9: Understanding the `terraform graph` Command
 
 #### Generate a Dependency Graph
 Use the `terraform graph` command to create a visual representation of the dependencies.
 
 ```sh
+sudo apt install graphviz 
 terraform graph | dot -Tsvg > graph.svg
 ```
+- The `terraform graph` command outputs a graph in DOT format, which can be visualized using `Graphviz` to understand resource dependencies.
 
-- The `terraform graph` command outputs a graph in DOT format, which can be visualized using Graphviz to understand resource dependencies.
+- A graph.svg file will be created in the project directory
+
+![](./images/1.png)
+
+if we open the graph.svg in a browser we can see output like this
+
+![](./images/2.png)
+
+
+
+
 
 ### Step 10: Destroying the Resources
 

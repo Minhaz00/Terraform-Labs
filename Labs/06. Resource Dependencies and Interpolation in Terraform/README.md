@@ -12,6 +12,13 @@ You are tasked with managing a local file that contains the name of a randomly g
 
 ### Step 1: Setting Up the Resources
 
+#### Create a Terraform Project Directory
+
+```sh
+mkdir terraform
+cd terraform
+```
+
 #### Create Terraform Configuration
 First, create a Terraform configuration file named `main.tf` to define the resources. The initial configuration will create a random pet name and a file that uses this name.
 
@@ -31,7 +38,7 @@ resource "random_pet" "my_pet" {
 }
 
 resource "local_file" "example" {
-  filename = "/root/pet_name.txt"
+  filename = "example.txt"
   content  = "My favorite pet is ${random_pet.my_pet.id}."
 }
 ```
@@ -50,6 +57,8 @@ terraform init
 ```
  - The `terraform init` command initializes the directory, downloads the provider plugins (`local` and `random`), and sets up the environment for Terraform to run.
 
+ - ![](./images/lab-6-1.png)
+
 ### Step 3: Applying the Configuration
 
 #### Apply the Configuration
@@ -60,6 +69,13 @@ terraform apply
 ```
 
 Type `yes` when prompted to confirm the creation.
+
+![](./images/Screenshot%202024-07-30%20125507.png)
+
+#### Verify the Resources
+After applying the configuration, verify that the resources have been created successfully.
+
+![](./images/2.png)
 
 ### Step 4: Understanding Implicit and Explicit Dependencies
 
@@ -87,7 +103,7 @@ resource "random_pet" "my_pet" {
 }
 
 resource "local_file" "example" {
-  filename = "/root/pet_name.txt"
+  filename = "pet_name.txt"
   content  = "My favorite pet is ${random_pet.my_pet.id}."
   depends_on = [random_pet.my_pet]
 }
@@ -104,6 +120,7 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
+ *Note : If we already apply the implicit_dependency then, it will not apply because there is no change in the state as implicit and explicit both do the same task*
 ### Step 6: Destroying the Resources
 
 #### Run Terraform Destroy
