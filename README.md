@@ -17,6 +17,6 @@
 
 ### Working With Terraform
 10. [Terraform commands](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/10.%20Exploring%20Terraform%20Commands)  
-11. [Lifecycles Rules in Terraform]()  
+11. [Lifecycles Rules in Terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform)  
 12. [Datasources in Terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/12.%20Datasources%20in%20terraform)
 13. [Meta-Arguments (Count and ForEach) in Terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/13.%20Meta-Arguments%20(Count%20and%20ForEach)%20in%20Terraform) 
