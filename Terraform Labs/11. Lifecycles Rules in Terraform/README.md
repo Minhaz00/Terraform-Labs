@@ -12,6 +12,13 @@ In this lab, we will explore Terraform lifecycle rules using the `local` provide
 
 ## Step 1: Setting Up Terraform Configuration
 
+### Create a Terraform Project Directory
+
+```sh
+mkdir terraform
+cd terraform
+```
+
 ### Define the Provider
 
 Create a new directory for your Terraform project and navigate to it. Create a file named `main.tf` and start by defining the `local` provider.
