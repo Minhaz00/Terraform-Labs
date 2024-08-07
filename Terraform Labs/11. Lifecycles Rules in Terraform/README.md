@@ -9,9 +9,6 @@ In this lab, we will explore Terraform lifecycle rules using the `local` provide
 3. Use the `ignore_changes`, `create_before_destroy`, and `prevent_destroy` lifecycle arguments.
 4. Apply the Terraform configuration and observe the effects of lifecycle rules.
 
-## Prerequisites
-
-- Terraform installed on your local machine.
 
 ## Step 1: Setting Up Terraform Configuration
 
