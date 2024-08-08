@@ -67,6 +67,7 @@ Initialize your Terraform workspace to set up the environment:
 ```sh
 terraform init
 ```
+![](./images/1.png)
 
 ### Apply the Configuration
 
@@ -75,6 +76,8 @@ Apply the Terraform configuration to create the local file:
 ```sh
 terraform apply
 ```
+
+![](./images/2.png)
 
 Type `yes` when prompted to confirm the creation of resources.
 
@@ -106,8 +109,9 @@ Apply the modified configuration:
 ```sh
 terraform apply
 ```
+![](./images/3.png)
 
-Type `yes` when prompted. Observe that the file is not recreated, as the `ignore_changes` lifecycle rule is in effect.
+Observe that the file is not recreated, as the `ignore_changes` lifecycle rule is in effect.
 
 ### Test Prevent Destroy
 
