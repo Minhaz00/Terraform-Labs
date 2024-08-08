@@ -80,7 +80,13 @@ You will find the `AWS Access key` and `AWS Seceret Access key` on Lab descripti
 
 #### Create a New Terraform Configuration File
 
-Create a new directory for your Terraform project and navigate to it. Create a file named `main.tf` to define the IAM policy and role.
+### Create a Terraform Project Directory
+
+```sh
+mkdir terraform
+cd terraform
+```
+Create a file named `main.tf` to define the IAM policy and role.
 
 ```py
 # main.tf
