@@ -158,7 +158,6 @@ Type `yes` when prompted to confirm the creation of resources.
 #### Verify in AWS Console
 
 1. **S3 Bucket**: Navigate to the S3 section in the AWS Console and verify that the bucket `my-bucket-poridhi-123` is created.
-
 ![](./images/7.png)
 
 2. **Versioning**: Check that versioning is enabled for the bucket.
