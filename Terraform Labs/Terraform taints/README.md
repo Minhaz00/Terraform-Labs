@@ -8,6 +8,12 @@ Terraform taints mark a resource for recreation in the next `terraform apply` op
 
 You can also manually taint a resource using the `terraform taint` command, forcing it to be recreated in the next apply. If you decide that a resource shouldn't be recreated, you can reverse the tainted status with the `terraform untaint` command, preventing it from being destroyed and recreated.
 
+## Prerequisites
+
+1. configure AWS using `aws configure` command in the AWS CLI.
+2. Create a VPC in the AWS `ap-southeast-1` region.  
+3. Create a subnet in the VPC and copy the subnet ID.
+
 ## Automatic Tainting due to Provisioner Failure
 
 ### **Scenario Overview**
@@ -96,7 +102,14 @@ In this scenario, you will manually taint a resource to force its recreation and
      }
      ```
 
-### **Step 2: Apply the Configuration**
+### **Step 2: Init and Apply the Configuration**
+
+   - Init the terraform:
+
+     ```bash
+     terraform init
+     ```
+
    - Apply the changes:
 
      ```bash
