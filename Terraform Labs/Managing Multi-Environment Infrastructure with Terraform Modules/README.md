@@ -18,6 +18,37 @@ Your organization requires setting up a shared network that both development and
 
 ## Step 1: Set Up the Project Structure
 
+### Install AWS CLI
+
+Before proceeding, ensure that the AWS CLI is installed on your local machine. Follow the instructions below based on your operating system:
+
+- **Windows**:
+  1. Download the AWS CLI MSI installer from the [official AWS website](https://aws.amazon.com/cli/).
+  2. Run the downloaded MSI installer and follow the instructions.
+
+- **Linux**:
+  ```sh
+  curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
+  unzip awscliv2.zip
+  sudo ./aws/install
+  ```
+
+#### Configure AWS CLI
+
+After installing the AWS CLI, configure it with the necessary credentials. Run the following command and follow the prompts to configure it:
+
+```sh
+aws configure
+```
+
+- **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
+
+![](./images/5.png)
+
+You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
+
+![](./images/6.png)
+
 ### Directory Structure
 
 Organize your Terraform project with the following directory structure:
