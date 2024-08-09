@@ -55,7 +55,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Observe the detailed logs in your terminal. These logs will provide insights into where the error occurred.
 
-        ![alt text](image.png)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image.png?raw=true)
 
 ### Step 3: Store Logs in a File
    - Set the `TF_LOG_PATH` environment variable to store the logs:
@@ -64,7 +64,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Run `terraform apply` again. This time, the logs will be saved to `terraform-debug.log`.
 
-        ![alt text](image-1.png)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image-1.png?raw=true)
 
 ### Step 4: Identify and Fix the Issue
    - Open the `terraform-debug.log` file and search for clues regarding the error.
@@ -88,7 +88,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Verify that the instance is created successfully.
 
-        ![alt text](image-2.png)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image-2.png?raw=true)
 
 
 
@@ -129,6 +129,7 @@ In this scenario, you will create a local file using Terraform’s `local_file` 
    - Update the configuration by either:
      - Creating the `output` directory manually before applying the configuration, or
      - Changing the `filename` to a path that exists, such as `"example.txt"` in the current directory:
+
      ```hcl
      resource "local_file" "example_file" {
        filename = "example.txt"  # Corrected path
@@ -138,10 +139,12 @@ In this scenario, you will create a local file using Terraform’s `local_file` 
 
 ### **Step 5: Apply the Corrected Configuration**
    - Unset the logging environment variable:
+
      ```bash
      unset TF_LOG
      ```
    - Apply the corrected configuration:
+   
      ```bash
      terraform apply
      ```
