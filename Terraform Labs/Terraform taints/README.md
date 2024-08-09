@@ -46,7 +46,7 @@ You will simulate a scenario where an EC2 instance's creation fails due to an in
      ```
    - Observe the failure caused by the incorrect file path.
 
-      ![alt text](image.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image.png?raw=true)
 
 ### **Step 3: Inspect the Tainted Resource**
    - After the failure, run:
@@ -56,7 +56,7 @@ You will simulate a scenario where an EC2 instance's creation fails due to an in
      ```
    - Notice that Terraform marks the `aws_instance.web_server` resource as tainted and plans to recreate it.
 
-      ![alt text](image-1.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-1.png?raw=true)
 
 ### **Step 4: Correct the Configuration and Apply**
    - Correct the file path in `main.tf`:
@@ -71,7 +71,7 @@ You will simulate a scenario where an EC2 instance's creation fails due to an in
      ```
    - Verify that the instance is recreated successfully, and the file is written to the correct path.
 
-      ![alt text](image-2.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-2.png?raw=true)
 
 
 
@@ -111,7 +111,7 @@ In this scenario, you will manually taint a resource to force its recreation and
      terraform taint aws_instance.web_server
      ```
 
-      ![alt text](image-3.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-3.png?raw=true)
 
    - Run the command:
       ```
@@ -119,7 +119,7 @@ In this scenario, you will manually taint a resource to force its recreation and
       ```
       to see that Terraform plans to recreate the instance.
 
-        ![alt text](image-4.png)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-4.png?raw=true)
 
 ### **Step 4: Untaint the Resource**
    - Use the `terraform untaint` command to remove the taint:
@@ -128,7 +128,7 @@ In this scenario, you will manually taint a resource to force its recreation and
      terraform untaint aws_instance.web_server
      ```
 
-      ![alt text](image-5.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-5.png?raw=true)
 
    - Run the command: 
       ```
@@ -136,7 +136,7 @@ In this scenario, you will manually taint a resource to force its recreation and
       ``` 
       This will confirm that the instance will not be recreated.
 
-        ![alt text](image-6.png)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-6.png?raw=true)
 
 ### **Step 5: Apply the Final Configuration**
    - Apply the final configuration:
@@ -146,7 +146,7 @@ In this scenario, you will manually taint a resource to force its recreation and
      ```
    - Verify that no changes are made to the existing instance.
 
-      ![alt text](image-7.png)
+      ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20taints/images/image-7.png?raw=true)
 
 ## **Summary**
 
