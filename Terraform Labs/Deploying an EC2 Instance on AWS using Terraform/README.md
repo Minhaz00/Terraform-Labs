@@ -50,7 +50,7 @@ Provide your AWS Access Key, Secret Access Key, Default Region (e.g., `ap-southe
 ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-3.png?raw=true)
 
 ### 3. Create Internet Gateway and Configure Route Table
-- Create internet gateway named `my-IG`
+- Create internet gateway named `my-IG` and attach it to `my-vpc`.
 - Create route table named `my-RT`
 - Edit route table as follows: 
 
