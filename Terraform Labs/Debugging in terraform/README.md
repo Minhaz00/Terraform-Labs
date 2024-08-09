@@ -24,6 +24,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
 - Create a VPC. 
 - Create a subnet within that VPC
 - Copy the subnet ID for EC2
+- Configure AWS using `aws configure` command
 
 
 ### Step 1: Create a Terraform Configuration with an Error
@@ -144,7 +145,7 @@ In this scenario, you will create a local file using Terraform’s `local_file` 
      unset TF_LOG
      ```
    - Apply the corrected configuration:
-   
+
      ```bash
      terraform apply
      ```
