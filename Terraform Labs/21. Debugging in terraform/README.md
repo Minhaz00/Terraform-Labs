@@ -56,7 +56,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Observe the detailed logs in your terminal. These logs will provide insights into where the error occurred.
 
-        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image.png?raw=true)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/21.%20Debugging%20in%20terraform/images/image.png?raw=true)
 
 ### Step 3: Store Logs in a File
    - Set the `TF_LOG_PATH` environment variable to store the logs:
@@ -65,7 +65,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Run `terraform apply` again. This time, the logs will be saved to `terraform-debug.log`.
 
-        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image-1.png?raw=true)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/21.%20Debugging%20in%20terraform/images/image-1.png?raw=true)
 
 ### Step 4: Identify and Fix the Issue
    - Open the `terraform-debug.log` file and search for clues regarding the error.
@@ -89,7 +89,7 @@ We will introduce an error in a Terraform configuration and use Terraform's logg
      ```
    - Verify that the instance is created successfully.
 
-        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Debugging%20in%20terraform/images/image-2.png?raw=true)
+        ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/21.%20Debugging%20in%20terraform/images/image-2.png?raw=true)
 
 
 

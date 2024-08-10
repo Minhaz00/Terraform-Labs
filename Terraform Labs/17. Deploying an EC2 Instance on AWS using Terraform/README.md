@@ -2,7 +2,7 @@
 
 In this lab, you will learn how to deploy an EC2 instance on AWS using Terraform. This process will guide you through setting up an SSH key pair, creating a security group for SSH access, and deploying an EC2 instance with a basic NGINX web server. This lab assumes you can manually create a VPC, public subnet, internet gateway, and routing table in AWS.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-7.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-7.png?raw=true)
 
 
 ## Introduction
@@ -27,7 +27,7 @@ aws configure
 
 Provide your AWS Access Key, Secret Access Key, Default Region (e.g., `ap-southeast-1`), and output format (e.g., `json`). You can get the keys from lab creadentials.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image.png?raw=true)
 
 ## Step 2: Manually Create VPC and Public Subnet for the EC2
 
@@ -39,7 +39,7 @@ Provide your AWS Access Key, Secret Access Key, Default Region (e.g., `ap-southe
 - CIDR block: `10.0.0.0/16`
 - Create the VPC
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-2.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-2.png?raw=true)
 
 ### 2. Create Subnet
 - Go to `subnets` and click on `Create Subnet`
@@ -47,20 +47,20 @@ Provide your AWS Access Key, Secret Access Key, Default Region (e.g., `ap-southe
 - Name: `my-subnet`
 - CIDR block: `10.0.0.0/24`
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-3.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-3.png?raw=true)
 
 ### 3. Create Internet Gateway and Configure Route Table
 - Create internet gateway named `my-IG` and attach it to `my-vpc`.
 - Create route table named `my-RT`
 - Edit route table as follows: 
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-4.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-4.png?raw=true)
 
 - Edit subnet association and add it to the subnet `my-subnet`
 
 Finally, here is the required vpc configuration resource map:
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-5.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-5.png?raw=true)
 
 
 ## Step 2: Set Up Terraform Configuration
@@ -244,7 +244,7 @@ After the deployment, Terraform will output the public IP address of your EC2 in
 
 We can verify that created EC2 instance from the console:
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-6.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-6.png?raw=true)
 
 ## Step 4: Connect to Your EC2 Instance
 
@@ -256,7 +256,7 @@ ssh -i ~/.ssh/web_key ubuntu@<public-ip>
 
 Replace `<public-ip>` with the actual public IP output by Terraform.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-1.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/17.%20Deploying%20an%20EC2%20Instance%20on%20AWS%20using%20Terraform/images/image-1.png?raw=true)
 
 ## Conclusion
 
