@@ -1,4 +1,4 @@
-# Understanding Remote State and Remote Backends with Terraform Cloud
+# Remote State, Remote Backends with Terraform Cloud and State commands
 
 In Terraform, the state file is crucial as it maps Terraform configurations to real-world infrastructure. By default, this state file is stored locally in the `terraform.tfstate` file. While local state storage is convenient for individual projects, it doesn't scale well for team collaboration due to issues like state file corruption, lack of state locking, and the risk of exposing sensitive information. To address these challenges, Terraform allows you to store state remotely using remote backends, like S3 or Terraform Cloud, which offer secure, shared storage and state locking.
 
