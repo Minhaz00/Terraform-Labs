@@ -54,7 +54,7 @@ terraform init
 
 - The `terraform init` command initializes the directory, downloads the provider plugins (`local` and `random`), and sets up the environment for Terraform to run.
 
-- ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/09.%20Managing%20Terraform%20State/images/lab-9-1.png)
+- ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/09.%20Managing%20Terraform%20State/images/lab-9-1.png)
 
 ### Step 3: Applying the Configuration
 
@@ -67,14 +67,14 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/09.%20Managing%20Terraform%20State/images/lab-6-2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/09.%20Managing%20Terraform%20State/images/lab-6-2.png)
 
 ### Step 4: Examining the State File
 
 #### Inspect the State File
 After applying the configuration, a state file named `terraform.tfstate` is generated. 
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/09.%20Managing%20Terraform%20State/images/lab-9-2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/09.%20Managing%20Terraform%20State/images/lab-9-2.png)
 
 This file contains the state of the infrastructure.
 
@@ -82,7 +82,7 @@ This file contains the state of the infrastructure.
 cat terraform.tfstate
 ```
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/09.%20Managing%20Terraform%20State/images/lab-9-3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/09.%20Managing%20Terraform%20State/images/lab-9-3.png)
 
 - The state file includes detailed information about your infrastructure, such as resource IDs, attributes, and metadata. It helps Terraform track and manage resources.
 

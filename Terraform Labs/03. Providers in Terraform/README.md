@@ -52,7 +52,7 @@ terraform init
 
 - The `terraform init` command initializes the directory, downloads the provider plugin (in this case, the `local` provider), and sets up the environment for Terraform to run.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/03.%20Providers%20in%20Terraform/images/lab-3-1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/03.%20Providers%20in%20Terraform/images/lab-3-1.png)
 
 - **Provider Source Address** : The source address for a provider follows the format `hostname/namespace/type`.
     - `hostname` (optional): Defaults to `registry.terraform.io` if omitted.
@@ -93,7 +93,7 @@ Type `yes` when prompted to confirm the creation.
 #### Verify the Resources
 After applying the configuration, verify that the resources have been created successfully.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/03.%20Providers%20in%20Terraform/images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/03.%20Providers%20in%20Terraform/images/1.png)
 
 
 ### Step 5: Destroying the File
@@ -157,7 +157,7 @@ Initialize Terraform to set up the project directory and download the required p
 terraform init
 ```
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/03.%20Providers%20in%20Terraform/images/lab-6-1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/03.%20Providers%20in%20Terraform/images/lab-6-1.png)
 
 ### Step 3: Applying the Configuration
 
@@ -174,7 +174,7 @@ Type `yes` when prompted to confirm the creation.
 #### Verify the Resources
 After applying the configuration, verify that the resources have been created successfully.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Labs/03.%20Providers%20in%20Terraform/images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/03.%20Providers%20in%20Terraform/images/2.png)
 
 ### Step 4: Destroying the Resources
 

@@ -2,7 +2,7 @@
 
 In this lab, you will learn how to use Terraform modules from the Terraform Registry to create network infrastructure on AWS. This includes setting up a Virtual Private Cloud (VPC), public and private subnets, route tables, and an internet gateway. Terraform modules help you abstract and reuse infrastructure code, making it easier to manage and scale your deployments.
 
-![](./images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/AWS%20Network%20Infrastructure%20Using%20Terraform%20Registry%20Modules/images/logo.png)
 
 ## Scenario Description
 
@@ -57,11 +57,11 @@ aws configure
 
 - **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
 
-![](./images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/AWS%20Network%20Infrastructure%20Using%20Terraform%20Registry%20Modules/images/5.png)
 
 You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
 
-![](./images/6.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/AWS%20Network%20Infrastructure%20Using%20Terraform%20Registry%20Modules/images/6.png)
 
 ### Create the Project Directory
 
@@ -132,7 +132,7 @@ terraform init
 
 - This command will download the AWS provider and the `terraform-aws-modules/vpc/aws` module from the Terraform Registry.
 
-![](./images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/AWS%20Network%20Infrastructure%20Using%20Terraform%20Registry%20Modules/images/1.png)
 
 ### Apply the Configuration
 
@@ -168,7 +168,7 @@ As Terraform applies the configuration, it will create the VPC, subnets, route t
 
 In the VPC Dashboard, click on `my-vpc` we just created,here you will find resource map
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/AWS%20Network%20Infrastructure%20Using%20Terraform%20Registry%20Modules/images/2.png)
 
 ## Step 5: Cleaning Up
 
