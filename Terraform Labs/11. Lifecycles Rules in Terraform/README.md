@@ -67,7 +67,7 @@ Initialize your Terraform workspace to set up the environment:
 ```sh
 terraform init
 ```
-![](./images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/1.png)
 
 ### Apply the Configuration
 
@@ -77,7 +77,7 @@ Apply the Terraform configuration to create the local file:
 terraform apply
 ```
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/2.png)
 
 Type `yes` when prompted to confirm the creation of resources.
 
@@ -109,7 +109,7 @@ Apply the modified configuration:
 ```sh
 terraform apply
 ```
-![](./images/3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/3.png)
 
 Observe that the file is not recreated, as the `ignore_changes` lifecycle rule is in effect.
 
@@ -126,3 +126,4 @@ You will see an error message indicating that the file cannot be destroyed due t
 ## Conclusion
 
 In this lab, you learned how to use Terraform lifecycle rules to manage local file resources. By leveraging `create_before_destroy`, `prevent_destroy`, and `ignore_changes`, you gain more control over your resources and reduce the risk of accidental disruptions. This lab demonstrates how lifecycle rules can enhance resource management and stability within Terraform-managed environments.
+

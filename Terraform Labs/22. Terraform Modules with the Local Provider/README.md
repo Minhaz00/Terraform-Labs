@@ -2,31 +2,30 @@
 
 In this lab, you will learn how to use Terraform modules with the local provider to manage files and directories on your local filesystem. 
 
-## What are Terraform Modules?
-
-**Terraform module :** Modules are groups of `.tf` files that are kept in a different directory from the configuration as a whole. A module’s scope encompasses all of its resources. So, if the user needs information about the resources that a module creates, the module must be explicitly stated. To do this, declare an output on the module that exposes the necessary data and permits references to that output from outside the module
-
-![](./image/logo.png)
-
-### Advantages of Using Terraform Modules
-
-1. **Reusability**: Modules allow you to define your infrastructure once and reuse it across multiple environments or projects, reducing duplication.
-2. **Maintainability**: By grouping related resources into a module, you can manage and update infrastructure more easily and consistently.
-3. **Collaboration**: Modules can be shared among teams, promoting consistency and best practices across your organization.
-
-## Scenario Description
-
-You are tasked with setting up and managing a directory structure and files on your local filesystem. Instead of writing all the configurations in a single Terraform configuration file, you decide to use modules to organize your code. This will help you create a reusable setup that can be applied to different projects with minimal changes.
-
-![](./image/logo-2.png)
-
-
 ## Objectives
 
 1. Create a Terraform module that manages directory creation.
 2. Create a Terraform module that manages file creation within those directories.
 3. Use these modules to set up a directory structure with files in your local environment.
 4. Apply the Terraform configuration to create the directories and files.
+
+## Scenario Description
+
+You are tasked with setting up and managing a directory structure and files on your local filesystem. Instead of writing all the configurations in a single Terraform configuration file, you decide to use modules to organize your code. This will help you create a reusable setup that can be applied to different projects with minimal changes.
+
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20Modules%20with%20the%20Local%20Provider/image/logo-2.png)
+
+## What are Terraform Modules?
+
+**Terraform module :** Modules are groups of `.tf` files that are kept in a different directory from the configuration as a whole. A module’s scope encompasses all of its resources. So, if the user needs information about the resources that a module creates, the module must be explicitly stated. To do this, declare an output on the module that exposes the necessary data and permits references to that output from outside the module
+
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20Modules%20with%20the%20Local%20Provider/image/logo.png)
+
+### Advantages of Using Terraform Modules
+
+1. **Reusability**: Modules allow you to define your infrastructure once and reuse it across multiple environments or projects, reducing duplication.
+2. **Maintainability**: By grouping related resources into a module, you can manage and update infrastructure more easily and consistently.
+3. **Collaboration**: Modules can be shared among teams, promoting consistency and best practices across your organization.
 
 ## Step 1: Setting Up the Project Structure
 
@@ -209,9 +208,9 @@ Type `yes` when prompted to confirm the creation of resources.
 ### Verify the Results
 
 Check your local filesystem to ensure that the directories and files have been created correctly in both `project1` and `project2`.
-![](./image/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20Modules%20with%20the%20Local%20Provider/image/1.png)
 
-![](./image/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20Modules%20with%20the%20Local%20Provider/image/2.png)
 
 ## Conclusion
 
