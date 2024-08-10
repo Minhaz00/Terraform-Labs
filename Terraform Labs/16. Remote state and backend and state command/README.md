@@ -26,7 +26,8 @@ You are part of a DevOps team tasked with managing the infrastructure for a new 
    - Go to your Terraform Cloud account and generate an API token.
    - Copy the token to use in the next step.
 
-   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image.png?raw=true)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image.png?raw=true)
+
 
 2. **Log in to Terraform Cloud:**
    ```bash
@@ -34,7 +35,7 @@ You are part of a DevOps team tasked with managing the infrastructure for a new 
    ```
    - Paste the API token when prompted.
 
-   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-1.png?raw=true)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-1.png?raw=true)
 
 ### **Step 2: Initialize a New Terraform Configuration**
 
@@ -92,7 +93,7 @@ You are part of a DevOps team tasked with managing the infrastructure for a new 
     - Go to **workspce settings** > **general**.
     - Set the execution mode to **Local** and save it.
 
-    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-3.png?raw=true)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-3.png?raw=true)
 
 
 ### **Step 5: Plan and Apply the Configuration**
@@ -109,14 +110,14 @@ You are part of a DevOps team tasked with managing the infrastructure for a new 
    ```
    Confirm the apply to create the infrastructure.
 
-    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-4.png?raw=true)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-4.png?raw=true)
 
 ### **Step 6: Verify Remote State Storage**
 
 **Log in to Terraform Cloud:**
 - Navigate to your workspace and verify that the state file is stored remotely.
 
-    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-2.png?raw=true)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-2.png?raw=true)
 
 
 
@@ -139,7 +140,7 @@ terraform state list
 
 This command lists all the resources tracked in the current state file. It's useful to verify that all the expected resources are being managed by Terraform.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-5.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-5.png?raw=true)
 
 ### 2. Showing Detailed Information About a Resource
 
@@ -149,9 +150,9 @@ terraform state show <resource_id>
 
 This command shows detailed information about a specific resource from the state file. Replace `<resource_id>` with the actual resource ID (e.g., `aws_vpc.main_vpc`), which you can get from the `terraform state list` command.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-6.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-6.png?raw=true)
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-7.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-7.png?raw=true)
 
 ### 3. Moving Resources Between Modules or Namespaces
 
@@ -167,7 +168,7 @@ Example:
 terraform state mv aws_subnet.main_subnet aws_subnet.my_main_subnet
 ```
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-8.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-8.png?raw=true)
 
 This example moves/changes name of a subnet , which is useful when we want to change without recreating it again. Now we need to change the name of the subnet manually. 
 
@@ -180,7 +181,7 @@ resource "aws_subnet" "my_main_subnet" {
 
 If we run `terraform apply` no resource will be created.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-9.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-9.png?raw=true)
 
 ### 4. Removing Resources from the State
 
@@ -196,7 +197,7 @@ Example:
 terraform state rm aws_subnet.my_main_subnet
 ```
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-10.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-10.png?raw=true)
 
 This will remove the subnet without destrying.
 
@@ -208,7 +209,7 @@ terraform state pull
 
 This command pulls the latest state from the remote backend (e.g., Terraform Cloud) and displays it locally. It's useful when you want to inspect the current state without making changes.
 
-![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Remote%20state%20and%20backend/images/image-11.png?raw=true)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/16.%20Remote%20state%20and%20backend%20and%20state%20command/images/image-11.png?raw=true)
 
 
 These commands help you manage your Terraform state effectively, allowing for better control and organization of your infrastructure.
