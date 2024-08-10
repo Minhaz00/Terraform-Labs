@@ -4,7 +4,7 @@
 
 In this lab, we will learn how to create an IAM role and policy using Terraform. IAM (Identity and Access Management) is a crucial component of AWS that allows you to securely manage access to AWS services and resources. This lab will cover the concepts of IAM roles and policies and guide you through the process of creating them using Terraform.
 
-![](./images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/logo.png)
 
 ## Objectives
 
@@ -72,11 +72,11 @@ aws configure
 
 - **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
 
-![](./images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/5.png)
 
 You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
 
-![](./images/6.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/6.png)
 
 #### Create a New Terraform Configuration File
 
@@ -186,7 +186,7 @@ Initialize your Terraform workspace to download the required provider plugins:
 terraform init
 ```
 
-![](./images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/1.png)
 
 #### 5.2: Apply the Configuration
 
@@ -196,7 +196,7 @@ Apply the Terraform configuration to create the IAM role and policy:
 terraform apply
 ```
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/2.png)
 
 Type `yes` when prompted to confirm the creation of resources.
 
@@ -205,9 +205,9 @@ Type `yes` when prompted to confirm the creation of resources.
 #### 6.1: Verify in AWS Console
 
 1. **IAM Policy**: Navigate to the IAM section in the AWS Console and verify that the policy `ExamplePolicy` is created with the specified permissions.
-![](./images/3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/3.png)
 2. **IAM Role**: Verify that the role `ExampleRole` is created and the policy is attached.
-![](./images/4.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/15.%20IAM%20Role%20and%20Policy%20in%20AWS%20with%20Terraform/images/4.png)
 - **Explanation**: Ensuring that both the IAM role and policy are correctly set up is crucial for the role to have the intended permissions.
 
 ## Conclusion
