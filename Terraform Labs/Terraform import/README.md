@@ -61,11 +61,11 @@ In this lab, you will import an existing AWS VPC into Terraform and manage it wi
 
 - AWS CLI configured with access to your AWS account.
 
-    ![alt text](image.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image.png?raw=true)
 
 - An existing AWS VPC created manually.
 
-    ![alt text](image-1.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image-1.png?raw=true)
 
 ### Steps
 
@@ -114,7 +114,7 @@ In this lab, you will import an existing AWS VPC into Terraform and manage it wi
    terraform import aws_vpc.imported_vpc <VPC ID>
    ```
 
-    ![alt text](image-2.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image-2.png?raw=true)
 
    After running this command, Terraform will link the existing VPC to the `imported_vpc` block in your configuration. However, the `main.tf` file will not be updated automatically.
 
@@ -126,7 +126,7 @@ In this lab, you will import an existing AWS VPC into Terraform and manage it wi
    terraform show
    ```
 
-   ![alt text](image-3.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image-3.png?raw=true)
 
    This command will display all the attributes that Terraform has stored for the imported VPC.
 
@@ -158,7 +158,7 @@ In this lab, you will import an existing AWS VPC into Terraform and manage it wi
    terraform plan
    ```
 
-   ![alt text](image-4.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image-4.png?raw=true)
 
    If your configuration matches the state, Terraform should indicate that no actions are necessary.
 
@@ -170,7 +170,7 @@ In this lab, you will import an existing AWS VPC into Terraform and manage it wi
    terraform apply
    ```
 
-   ![alt text](image-5.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20import/images/image-5.png?raw=true)
 
    Since the VPC already exists and is now fully under Terraform management, Terraform will make no changes, but any future changes to the VPC will be handled through Terraform.
 
