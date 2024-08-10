@@ -99,7 +99,7 @@ terraform console
   5
   ```
 
-  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/1.png)
+  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/25.%20Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/1.png)
 
 
 ### Test String Functions
@@ -136,7 +136,7 @@ terraform console
   "HELLO"
   ```
 
-  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/2.png)
+  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/25.%20Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/2.png)
 
 ### Test Collection Functions
 
@@ -183,7 +183,7 @@ terraform console
   "This is content for file1."
   ```
 
-  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/3.png)
+  ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/25.%20Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/3.png)
 
 ### Test Map Functions
 
@@ -240,7 +240,7 @@ Type `yes` when prompted to confirm the creation of resources.
 
 Check the contents of the generated files (`file_keys.txt` and `lowercase.txt`) to verify that the functions worked as expected.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/4.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/25.%20Exploring%20and%20Using%20Terraform%20Built-In%20Functions/images/4.png)
 
 ## Conclusion
 
