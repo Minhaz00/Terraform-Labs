@@ -1,4 +1,4 @@
-# Managing Multi-Environment Infrastructure with Shared Network in Terraform
+# Multi-Environment Infrastructure with Shared Network in Terraform
 
 In this lab, you will learn how to use Terraform modules to manage infrastructure across multiple environments, such as development and production, while sharing a common network setup. The network resources, including VPC, subnet, route table, and internet gateway (IGW), will be created once and shared across environments. You will also create separate EC2 instances for dev and prod environments using the shared network.
 
@@ -121,6 +121,12 @@ resource "aws_route" "default_route" {
 }
 ```
 
+**Explanation :**
+1. **VPC Creation**: The `aws_vpc` resource creates the main VPC with a specified CIDR block.
+2. **Subnet Setup**: The `aws_subnet` resource creates a public subnet within the VPC, mapped to an availability zone.
+3. **Internet Gateway**: The `aws_internet_gateway` resource sets up an Internet Gateway attached to the VPC.
+4. **Route Table and Association**: The `aws_route_table` and `aws_route_table_association` resources create a public route table and associate it with the subnet, allowing internet access through the gateway.
+
 **`modules/aws-network/variables.tf`:**
 
 ```py
@@ -186,6 +192,10 @@ output "subnet_id" {
   value = module.network.subnet_id
 }
 ```
+
+**Explanation :**
+1. **AWS Region**: Sets AWS region to `ap-southeast-1`.
+2. **Network Module**: Creates shared network resources (VPC, subnet) using the `aws-network` module.
 
 ## Step 4: Modify the EC2 Instance Module
 
@@ -258,6 +268,12 @@ resource "aws_security_group" "web_sg" {
 }
 ```
 
+**Explanation :**
+1. **EC2 Instance**: Launches an EC2 instance using the specified AMI and instance type within a given subnet.
+2. **Security Group**: Creates a security group allowing SSH (port 22) access and all outbound traffic.
+3. **Subnet Association**: Associates the instance with the specified subnet and security group.
+4. **Instance Tagging**: Tags the instance with a specified name for identification.
+
 ## Step 5: Use the Network and Instance Modules in Environments
 
 In the dev and prod environments, reference the shared network’s outputs and pass them to the `aws-instance` module:
@@ -287,6 +303,13 @@ module "web_server" {
   subnet_id     = data.terraform_remote_state.network.outputs.subnet_id
 }
 ```
+
+**Explanation :**
+Here’s a concise summary of what this Terraform code does:
+
+1. **AWS Provider**: Configures AWS provider for the `ap-southeast-1` region.
+2. **Shared Network Reference**: Fetches VPC and subnet details from a remote state file of a shared network.
+3. **EC2 Instance Module**: Deploys a `t2.micro` EC2 instance named "dev-web-server" in the shared VPC and subnet using the provided AMI ID.
 
 **`environments/prod/main.tf`:**
 
