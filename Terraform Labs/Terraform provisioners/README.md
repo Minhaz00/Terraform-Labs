@@ -39,13 +39,13 @@ Before starting with the Terraform configuration, ensure that the following prer
   ```
   You will be prompted to enter your AWS Access Key ID, Secret Access Key, region, and output format.
 
-  ![alt text](image.png)
+  ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image.png?raw=true)
 
 ### **2. VPC and Public Subnet**
 - Ensure that you have an existing VPC and a public subnet. You can create them manually through the AWS Management Console.
 - Note the VPC ID and Subnet ID, as they will be required in the Terraform configuration.
 
-  ![alt text](image-1.png)
+  ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image-1.png?raw=true)
 
 ### **3. SSH Key Generation**
 - Generate an SSH key pair if you don’t have one already. This key will be used to SSH into the EC2 instance.
@@ -221,13 +221,13 @@ To apply the Terraform configuration, follow these steps:
 
   - **`local-exec` Provisioner result:**
 
-    ![alt text](image-5.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image-5.png?raw=true)
 
   - **`remote-exec` Provisioner result:**
 
-    ![alt text](image-3.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image-3.png?raw=true)
 
-    ![alt text](image-4.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image-4.png?raw=true)
 
 
 
@@ -238,8 +238,9 @@ To apply the Terraform configuration, follow these steps:
    ```
    Confirm the destruction by typing `yes`. This will trigger the destroy provisioners to run before the resources are removed.
 
-   ![alt text](image-2.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Terraform%20provisioners/images/image-2.png?raw=true)
 
 ## **Conclusion**
 Provisioners in Terraform provide a flexible way to execute scripts or commands both locally and remotely, adding additional configuration steps to your infrastructure as code process. In this lab, we demonstrated how to use both `remote-exec` and `local-exec` provisioners to automate the setup and teardown of an NGINX.
+
 
