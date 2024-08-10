@@ -2,7 +2,8 @@
 
 In this lab, you will learn how to use Terraform modules to manage infrastructure across multiple environments, such as development and production, while sharing a common network setup. The network resources, including VPC, subnet, route table, and internet gateway (IGW), will be created once and shared across environments. You will also create separate EC2 instances for dev and prod environments using the shared network.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/logo.png)
+
 
 ## Scenario Description
 
@@ -43,11 +44,11 @@ aws configure
 
 - **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/5.png)
 
 You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/6.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/6.png)
 
 ### Directory Structure
 
@@ -373,20 +374,20 @@ After applying the configurations, verify that the resources have been correctly
 1. **Verify the Resource Map:**
    - Confirm that the EC2 instances are using the shared VPC, subnet, route table, and IGW.
 
-   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/res.png)
+   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/res.png)
 
 2. **Verify the Dev EC2 Instance:**
    - Log in to the AWS Management Console.
    - Navigate to the EC2 dashboard and verify that the "dev-web-server" instance is running.
    - Ensure it is correctly associated with the shared subnet and security group.
 
-   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/dev-ec2.png)
+   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/dev-ec2.png)
 
 3. **Verify the Prod EC2 Instance:**
    - In the same AWS Management Console, check the "prod-web-server" instance.
    - Confirm that it is also running and associated with the shared network resources.
 
-   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/Managing%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/prod-ec2.png)
+   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/23.%20Multi-Environment%20Infrastructure%20with%20Terraform%20Modules/images/prod-ec2.png)
 
 ## Conclusion
 
