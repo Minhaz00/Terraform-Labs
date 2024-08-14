@@ -8,6 +8,8 @@ In this lab, you will learn how to set up an Application Load Balancer (ALB) in 
 
 An Application Load Balancer (ALB) is a Layer 7 load balancer provided by AWS. It routes HTTP and HTTPS (Layer 7) traffic to targets such as EC2 instances, microservices, and containers within a VPC. ALB operates at the application layer, making routing decisions based on content. It is particularly useful for applications that require advanced routing, host-based or path-based routing, and WebSocket support.
 
+![alt text](./images/image-9.png)
+
 In this lab, we'll deploy an ALB to balance traffic across two web servers, ensuring that incoming requests are distributed evenly.
 
 ## **Task Description**
@@ -31,7 +33,7 @@ Before starting the lab, ensure the following:
 2. **SSH Key Pair:** Create an SSH key pair to access the EC2 instances using the following command:
 
     ```bash
-    ssh-keygen -t rsa -b 2048 -f alb-lab-key -N ""
+    ssh-keygen -t rsa -b 2048 -f ~/.ssh/web_key -N ""
     ```
 
 ## **Step-by-Step Solution**
@@ -159,18 +161,9 @@ data "aws_availability_zones" "available" {
   - **Internet Gateway:** Attaches an Internet Gateway to the VPC, allowing communication with the internet.
   - **Route Table:** Creates a route table that directs traffic to the Internet Gateway and associates it with the public subnets.
 
-#### **4. `outputs.tf` - Output Values**
 
-```hcl
-output "alb_dns_name" {
-  description = "The DNS name of the load balancer"
-  value       = aws_lb.my_alb.dns_name
-}
-```
 
-Outputs the DNS name of the ALB, which can be used to access the load-balanced application.
-
-#### **5. `ec2.tf` - EC2 Instances and Security Groups**
+#### **4. `ec2.tf` - EC2 Instances and Security Groups**
 
 ```hcl
 resource "aws_security_group" "ec2_sg" {
@@ -202,7 +195,7 @@ resource "aws_security_group" "ec2_sg" {
 
 resource "aws_key_pair" "web_key" {
   key_name   = "web_key"
-  public_key = file("~/.ssh/alb-lab-key.pub")
+  public_key = file("~/.ssh/web_key.pub")
 }
 
 resource "aws_instance" "web_server" {
@@ -236,7 +229,7 @@ resource "aws_instance" "web_server" {
 
 with Apache installed, each serving a basic webpage displaying the server’s hostname and IP address. The user data script ensures Apache is installed and started on boot.
 
-#### **6. `alb.tf` - Application Load Balancer Configuration**
+#### **5. `alb.tf` - Application Load Balancer Configuration**
 
 ```hcl
 resource "aws_lb" "my_alb" {
@@ -312,6 +305,18 @@ resource "aws_lb_target_group_attachment" "web_tg_attachment" {
 - **Target Group Attachment:** Attaches the EC2 instances to the ALB's target group.
 
 
+#### **6. `outputs.tf` - Output Values**
+
+```hcl
+output "alb_dns_name" {
+  description = "The DNS name of the load balancer"
+  value       = aws_lb.my_alb.dns_name
+}
+```
+
+Outputs the DNS name of the ALB, which can be used to access the load-balanced application.
+
+
 ## **Commands and Execution**
 
 ### 1. **Initialize Terraform**
@@ -340,31 +345,31 @@ terraform apply
 
 Expected result:
 
-![alt text](image.png)
+![alt text](./images/image.png)
 
 We can see the created resources in the AWS console:
 
 - **VPC with subnets:**
 
-    ![alt text](image-3.png)
+    ![alt text](./images/image-3.png)
 
 - **EC2 instances:**
 
-    ![alt text](image-4.png)     
+    ![alt text](./images/image-4.png)     
 
 - **Target group:**
 
-    ![alt text](image-5.png)
+    ![alt text](./images/image-5.png)
 
 - **ALB:**
 
-    ![alt text](image-6.png)
+    ![alt text](./images/image-6.png)
 
 - **Public IP of EC2 instances:**
 
-    ![alt text](image-7.png)
+    ![alt text](./images/image-7.png)
 
-    ![alt text](image-8.png)
+    ![alt text](./images/image-8.png)
 
 ### 4. **Verify the ALB**
 
@@ -374,11 +379,11 @@ We can see the created resources in the AWS console:
    http://<ALB_DNS_NAME>
    ```
 
-   ![alt text](image-1.png)
+   ![alt text](./images/image-1.png)
 
    If we reload we will get another instance:
 
-   ![alt text](image-2.png)
+   ![alt text](./images/image-2.png)
 
 
 
