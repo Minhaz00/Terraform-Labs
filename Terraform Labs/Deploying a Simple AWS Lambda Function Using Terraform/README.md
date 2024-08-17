@@ -1,22 +1,28 @@
-### Deploying a Simple AWS Lambda Function Using Terraform
+## Deploying a Simple AWS Lambda Function Using Terraform
 
-In this lab, you will learn how to deploy a simple AWS Lambda function using Terraform. AWS Lambda is a serverless compute service that allows you to run code without provisioning or managing servers. You will deploy a basic Lambda function that returns a "Hello, World!" message when invoked.
+In this lab, you'll learn how to deploy a simple AWS Lambda function using Terraform. AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You'll deploy a basic Lambda function that returns a "Hello, World!" message when invoked.
+
+![](./images/logo.png)
 
 ## Objectives
 
-1. **Understand AWS Lambda:** Learn the basics of AWS Lambda functions.
-2. **Write a Simple Lambda Function:** Create a "Hello, World!" Lambda function using Node.js.
-3. **Package the Lambda Function:** Package the Lambda function into a ZIP file.
-4. **Deploy with Terraform:** Create and deploy the Lambda function using Terraform.
-5. **Set Up IAM Role:** Configure an IAM role for the Lambda function with the necessary permissions.
-6. **Invoke the Lambda Function:** Verify that the Lambda function works correctly by invoking it.
+1. Write a "Hello, World!" Lambda function in Node.js.
+2. Package the function into a ZIP file.
+3. Deploy the Lambda function using Terraform.
+4. Set up an IAM role with necessary permissions.
+5. Test the Lambda function using the AWS CLI and Console.
+
+## Prerequisites
+
+1. **AWS Account**: Ensure you have an active AWS account.
+2. **AWS CLI**: Install and configure the AWS CLI with `aws configure`.
+3. **Terraform**: Install Terraform on your local machine.
 
 ## What is an AWS Lambda Function?
 
 AWS Lambda is a compute service that allows you to run code without managing servers. Simply write your code, upload it to Lambda, and the service takes care of scaling and execution. Lambda functions are often used in event-driven applications, such as responding to HTTP requests, processing S3 bucket files, or reacting to database changes.
 
-
-## Project directory structure for the lab
+## Project Directory Structure
 
 ```plaintext
 terraform-lambda-lab/
@@ -58,19 +64,19 @@ terraform-lambda-lab/
 
 Package the Lambda function into a ZIP file for deployment:
 
-if `zip` is not installed in your machine ,Installed it by,
+If `zip` is not installed on your machine, install it by running:
 
 ```bash
 sudo apt install zip
 ```
 
-Then apply this ,
+Then, package the function:
+
 ```bash
 zip function.zip index.js
 ```
 
 This command creates a `function.zip` file containing your Lambda function code.
-
 
 ## Step 2: Setting Up Terraform
 
@@ -97,10 +103,6 @@ resource "aws_iam_role" "lambda_role" {
       },
     }],
   })
-
-  tags = {
-    Name = "lambda-role"
-  }
 }
 
 # Attach the AWSLambdaBasicExecutionRole policy to the role
@@ -114,13 +116,9 @@ resource "aws_lambda_function" "hello_world" {
   function_name = "hello-world-function"
   role          = aws_iam_role.lambda_role.arn
   handler       = "index.handler"
-  runtime       = "nodejs14.x"
+  runtime       = "nodejs20.x"
   filename      = "${path.module}/function.zip"
   source_code_hash = filebase64sha256("${path.module}/function.zip")
-
-  tags = {
-    Name = "hello-world-function"
-  }
 }
 
 # Permission to invoke the Lambda function
@@ -134,14 +132,11 @@ resource "aws_lambda_permission" "allow_invoke" {
 
 ### Explanation of `main.tf`
 
-- **Provider Configuration:**
-  - Specifies the AWS region where resources will be deployed.
-
+- **Provider Configuration:** Specifies the AWS region where resources will be deployed.
 - **IAM Role:**
   - **aws_iam_role.lambda_role:** Creates an IAM role that the Lambda function will assume. The role includes a policy allowing Lambda to assume the role.
   - **aws_iam_role_policy_attachment.lambda_policy:** Attaches the AWS-provided `AWSLambdaBasicExecutionRole` policy to the IAM role, granting permissions to write logs to CloudWatch.
-
-- **Lambda Function:**
+- **Lambda Function:** 
   - **aws_lambda_function.hello_world:** Deploys the Lambda function using the Node.js runtime. The function code is provided in the `function.zip` file, and the handler is set to `index.handler`.
   - **aws_lambda_permission.allow_invoke:** Grants permission for the Lambda function to be invoked by any AWS service.
 
@@ -165,6 +160,8 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation of resources.
 
+![](./images/4.png)
+
 ## Step 4: Invoking the Lambda Function
 
 ### Use the AWS CLI to Invoke the Function
@@ -178,9 +175,13 @@ aws lambda invoke \
     response.json
 ```
 
+![](./images/1.png)
+
 This command invokes the Lambda function and saves the response to `response.json`.
 
-### 4.2: Check the Response
+![](./images/2.png)
+
+### Check the Response
 
 Check the contents of `response.json`:
 
@@ -190,7 +191,23 @@ cat response.json
 
 You should see the "Hello, World!" message in the response.
 
+### Test the Lambda Function in the AWS Console
+
+1. **Log in to the AWS Management Console** and navigate to the **Lambda** service.
+2. **Select your Lambda function** (e.g., `hello-world-function`).
+3. Click on the **Test** button in the Lambda console.
+4. **Create a new test event**:
+    - Name the test event (e.g., "TestEvent").
+    - Use the default JSON template for the test event.
+
+    ![](./images/6.png)
+
+5. **Click on Test** to invoke the function directly from the console.
+6. **View the results**: The output should show the "Hello, World!" message.
+   - ![](./images/5.png)
+
+
 
 ## Conclusion
 
-In this lab, you created a simple "Hello, World!" AWS Lambda function using Node.js, packaged it into a ZIP file, and deployed it using Terraform. You also set up the necessary IAM role and permissions for the Lambda function and invoked it using the AWS CLI. This lab demonstrates the basics of deploying Lambda functions with Terraform, which you can build upon for more complex serverless applications.
+In this lab, you created a simple "Hello, World!" AWS Lambda function using Node.js, packaged it into a ZIP file, and deployed it using Terraform. You also set up the necessary IAM role and permissions for the Lambda function, invoked it using the AWS CLI, and verified it using both the CLI and the AWS Management Console. This lab provides a foundational understanding of deploying Lambda functions with Terraform, which you can build upon for more complex serverless applications.
