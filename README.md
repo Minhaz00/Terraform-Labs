@@ -71,16 +71,16 @@
 
 ### Practical Labs with Terraform
 
-26. [Securing Private Subnet Access with a Bastion Server using Terraform]()
+26. [Securing Private Subnet Access with a Bastion Server using Terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform)
 
 27. [3-tier architecture using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture)
 
 28. [VPC peering using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/28.%20VPC%20peering)
 
-29. [Github action AWS infra with terraform]()
+29. [Github action AWS infra with terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud)
 
 30. [AWS ALB using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/30.%20ALB%20using%20terraform)
 
 31. [AWS Autoscaling using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/31.%20Autoscaling%20using%20terraform)
 
-32. [Deploying a Simple AWS Lambda Function Using Terraform]()
+32. [Deploying a Simple AWS Lambda Function Using Terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform)
