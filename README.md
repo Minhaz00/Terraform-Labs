@@ -73,14 +73,14 @@
 
 26. [Securing Private Subnet Access with a Bastion Server using Terraform]()
 
-27. [3-tier architecture using terraform]()
+27. [3-tier architecture using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture)
 
-28. [VPC peering using terraform]()
+28. [VPC peering using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/28.%20VPC%20peering)
 
 29. [Github action AWS infra with terraform]()
 
-30. [AWS ALB using terraform]()
+30. [AWS ALB using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/30.%20ALB%20using%20terraform)
 
-31. [AWS Autoscaling using terraform]()
+31. [AWS Autoscaling using terraform](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/31.%20Autoscaling%20using%20terraform)
 
 32. [Deploying a Simple AWS Lambda Function Using Terraform]()

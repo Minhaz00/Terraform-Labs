@@ -6,7 +6,9 @@ In this lab, we will explore how to set up a VPC peering connection between two 
 
 You are required to create two VPCs in the same AWS region and set up a VPC peering connection between them using Terraform. The lab will cover creating VPCs, subnets, Internet Gateways, route tables, security groups, EC2 instances, and establishing the VPC peering connection. Finally, you will verify the peering connection by testing connectivity between instances in the two VPCs.
 
-![alt text](./images/image-5.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-5.png?raw=true)
+
+
 
 ### Prerequisites
 - AWS CLI configured
@@ -298,17 +300,17 @@ terraform apply
 
 Expected output:
 
-![alt text](./images/image-1.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-1.png?raw=true)
 
 We can varify the created resources using aws console:
 
 - **VPCs:**
 
-![alt text](./images/image-6.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-6.png?raw=true)
 
 - **EC2 Instances:**
 
-![alt text](./images/image-7.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-7.png?raw=true)
 
 ## Step 5: Test Connectivity (Will Fail)
 
@@ -321,14 +323,14 @@ ping <VPC2_INSTANCE_PUBLIC_IP>
 
 Successfully ssh into instace in APP-VPC:
 
-![alt text](./images/image.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image.png?raw=true)
 
 
 
 
 Let's ping the DB-instance in other vpc using private IP. This will fail because there's no VPC peering connection yet:
 
-![alt text](./images/image-2.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-2.png?raw=true)
 
 ## Step 6: Add VPC Peering Configuration
 
@@ -367,7 +369,7 @@ We can varify the created vpc peering connection using AWS console:
 
 - **VPC peering Connection:**
 
-![alt text](./images/image-8.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-8.png?raw=true)
 
 
 ## Step 7: Apply VPC Peering Configuration
@@ -375,7 +377,7 @@ We can varify the created vpc peering connection using AWS console:
 ```bash
 terraform apply
 ```
-![alt text](./images/image-3.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-3.png?raw=true)
 
 ## Step 8: Test Connectivity Again (Should Succeed)
 
@@ -386,7 +388,7 @@ ssh -i ~/.ssh/deployer-key ec2-user@<VPC1_INSTANCE_PUBLIC_IP>
 ping <VPC2_INSTANCE_PUBLIC_IP>
 ```
 
-![alt text](./images/image-4.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/28.%20VPC%20peering/images/image-4.png?raw=true)
 
 This time, the ping should succeed, indicating that the VPC peering connection is working.
 

@@ -8,7 +8,8 @@ In this lab, you will learn how to set up an Application Load Balancer (ALB) in 
 
 An Application Load Balancer (ALB) is a Layer 7 load balancer provided by AWS. It routes HTTP and HTTPS (Layer 7) traffic to targets such as EC2 instances, microservices, and containers within a VPC. ALB operates at the application layer, making routing decisions based on content. It is particularly useful for applications that require advanced routing, host-based or path-based routing, and WebSocket support.
 
-![alt text](./images/image-9.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-9.png?raw=true)
+
 
 In this lab, we'll deploy an ALB to balance traffic across two web servers, ensuring that incoming requests are distributed evenly.
 
@@ -345,31 +346,31 @@ terraform apply
 
 Expected result:
 
-![alt text](./images/image.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image.png?raw=true)
 
 We can see the created resources in the AWS console:
 
 - **VPC with subnets:**
 
-    ![alt text](./images/image-3.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-3.png?raw=true)
 
 - **EC2 instances:**
 
-    ![alt text](./images/image-4.png)     
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-4.png?raw=true)     
 
 - **Target group:**
 
-    ![alt text](./images/image-5.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-5.png?raw=true)
 
 - **ALB:**
 
-    ![alt text](./images/image-6.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-6.png?raw=true)
 
 - **Public IP of EC2 instances:**
 
-    ![alt text](./images/image-7.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-7.png?raw=true)
 
-    ![alt text](./images/image-8.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-8.png?raw=true)
 
 ### 4. **Verify the ALB**
 
@@ -379,11 +380,11 @@ We can see the created resources in the AWS console:
    http://<ALB_DNS_NAME>
    ```
 
-   ![alt text](./images/image-1.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-1.png?raw=true)
 
    If we reload we will get another instance:
 
-   ![alt text](./images/image-2.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/30.%20ALB%20using%20terraform/images/image-2.png?raw=true)
 
 
 
