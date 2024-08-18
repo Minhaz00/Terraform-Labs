@@ -3,9 +3,7 @@
 
 In this lab, we'll build a 3-tier architecture on AWS using Terraform by leveraging the standardized VPC configuration. This architecture is a best practice for organizing your infrastructure into three layers: public, private, and database subnets. We'll use Terraform modules to create and manage the VPC, ensuring that our infrastructure is reusable, scalable, and maintainable. This guide will provide a detailed explanation of each step and the underlying code to help you understand the entire process.
 
-![alt text](./images/image-4.png)
-
-
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image-4.png?raw=true)
 
 ## **Prerequisites**
 
@@ -329,7 +327,7 @@ Once the folder structure and files are set up with the necessary code, the next
 terraform init
 ```
 
-![alt text](./images/image.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image.png?raw=true)
 
 This command downloads the required provider plugins and sets up the backend configuration.
 
@@ -343,7 +341,7 @@ Before proceeding, it’s crucial to validate the configuration files to ensure 
 terraform validate
 ```
 
-![alt text](./images/image-1.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image-1.png?raw=true)
 
 This command checks if the configuration is syntactically valid and internally consistent.
 
@@ -369,7 +367,7 @@ To create the VPC and related resources as described in the configuration, run t
 terraform apply
 ```
 
-![alt text](./images/image-2.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image-2.png?raw=true)
 
 
 This command will prompt for confirmation. You need to type `yes` for confirmation. After confirmation, Terraform will create the resources in AWS.
@@ -392,7 +390,7 @@ To view all resources managed by Terraform, use:
 terraform state list
 ```
 
-![alt text](./images/image-3.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image-3.png?raw=true)
 
 This command lists all the resources that are currently managed by Terraform in your state file.
 
@@ -406,7 +404,7 @@ If you need to tear down the infrastructure, use the following command:
 terraform destroy
 ```
 
-![alt text](./images/image-5.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/27.%20AWS%203-tier%20architecture/images/image-5.png?raw=true)
 
 This command will destroy all the resources defined in your Terraform configuration.
 
