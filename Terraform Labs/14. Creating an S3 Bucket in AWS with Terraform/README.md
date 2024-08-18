@@ -4,7 +4,7 @@
 
 In this lab, we will learn how to create an S3 bucket with versioning enabled using Terraform. Amazon S3 (Simple Storage Service) is an object storage service that offers industry-leading scalability, data availability, security, and performance. This lab will guide you through the process of creating an S3 bucket, enabling versioning, and tagging the bucket for better management and organization.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/2.png?raw=true)
 
 ## Objectives
 
@@ -67,11 +67,11 @@ aws configure
 
 - **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/5.png?raw=true)
 
 You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/6.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/6.png?raw=true)
 
 #### Create a New Terraform Configuration File
 
@@ -146,7 +146,7 @@ Initialize your Terraform workspace to download the required provider plugins:
 terraform init
 ```
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/1.png?raw=true)
 
 #### Apply the Configuration
 
@@ -155,7 +155,7 @@ Apply the Terraform configuration to create the S3 bucket and enable versioning:
 ```sh
 terraform apply
 ```
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/3.png?raw=true)
 
 Type `yes` when prompted to confirm the creation of resources.
 
@@ -164,10 +164,10 @@ Type `yes` when prompted to confirm the creation of resources.
 #### Verify in AWS Console
 
 1. **S3 Bucket**: Navigate to the S3 section in the AWS Console and verify that the bucket `my-bucket-poridhi-123` is created.
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/7.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/7.png?raw=true)
 
 2. **Versioning**: Check that versioning is enabled for the bucket.
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/8.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/14.%20Creating%20an%20S3%20Bucket%20in%20AWS%20with%20Terraform/images/8.png?raw=true)
 
 ## Conclusion
 

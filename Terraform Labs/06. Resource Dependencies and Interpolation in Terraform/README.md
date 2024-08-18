@@ -57,7 +57,7 @@ terraform init
 ```
  - The `terraform init` command initializes the directory, downloads the provider plugins (`local` and `random`), and sets up the environment for Terraform to run.
 
- - ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/lab-6-1.png)
+ - ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/lab-6-1.png?raw=true)
 
 ### Step 3: Applying the Configuration
 
@@ -70,12 +70,12 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/Screenshot%202024-07-30%20125507.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/Screenshot%202024-07-30%20125507.png?raw=true)
 
 #### Verify the Resources
 After applying the configuration, verify that the resources have been created successfully.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/06.%20Resource%20Dependencies%20and%20Interpolation%20in%20Terraform/images/2.png?raw=true)
 
 ### Step 4: Understanding Implicit and Explicit Dependencies
 

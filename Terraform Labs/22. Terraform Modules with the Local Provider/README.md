@@ -13,13 +13,13 @@ In this lab, you will learn how to use Terraform modules with the local provider
 
 You are tasked with setting up and managing a directory structure and files on your local filesystem. Instead of writing all the configurations in a single Terraform configuration file, you decide to use modules to organize your code. This will help you create a reusable setup that can be applied to different projects with minimal changes.
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/logo-2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/logo-2.png?raw=true)
 
 ## What are Terraform Modules?
 
 **Terraform module :** Modules are groups of `.tf` files that are kept in a different directory from the configuration as a whole. A module’s scope encompasses all of its resources. So, if the user needs information about the resources that a module creates, the module must be explicitly stated. To do this, declare an output on the module that exposes the necessary data and permits references to that output from outside the module
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/logo.png?raw=true)
 
 ### Advantages of Using Terraform Modules
 
@@ -208,9 +208,9 @@ Type `yes` when prompted to confirm the creation of resources.
 ### Verify the Results
 
 Check your local filesystem to ensure that the directories and files have been created correctly in both `project1` and `project2`.
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/1.png?raw=true)
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/22.%20Terraform%20Modules%20with%20the%20Local%20Provider/image/2.png?raw=true)
 
 ## Conclusion
 
