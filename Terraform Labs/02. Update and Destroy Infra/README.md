@@ -47,7 +47,7 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation.
 
-![Apply Configuration](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-1.png)
+![Apply Configuration](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-1.png?raw=true)
 
 #### Check the Newly Created File Permissions
 Verify that the file permissions are applied properly.
@@ -55,7 +55,7 @@ Verify that the file permissions are applied properly.
 ```sh
 ls -l pets.txt
 ```
-![Check Permissions](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-4.png)
+![Check Permissions](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-4.png?raw=true)
 
 **Explanation:** The `file_permission` argument is set to "0777", which means that the file is created with read, write, and execute permissions for everyone (owner, group, and others).
 
@@ -83,7 +83,7 @@ terraform plan
 ```
 The output will indicate that the resource will be replaced. The `-/+` symbol at the beginning of the resource name shows that it will be deleted and then recreated. The line with `forces replacement` highlights that the file permission change triggers this replacement.
 
-![Plan Changes](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-2.png)
+![Plan Changes](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-2.png?raw=true)
 
 #### Apply the Changes
 Apply the changes to update the file permissions.
@@ -100,7 +100,7 @@ Verify that the file permissions are applied properly.
 ```sh
 ls -l pets.txt
 ```
-![Updated Permissions](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-5.png)
+![Updated Permissions](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-5.png?raw=true)
 
 **Explanation:** The `file_permission` argument is updated to "0700", which means that only the owner has read, write, and execute permissions, while the group and others have no permissions.
 
@@ -119,7 +119,7 @@ Confirm the destroy operation by typing `yes` when prompted.
 
 This command will delete the file `pets.txt` and any other resources defined in the current configuration directory.
 
-![Destroy Resource](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-3.png)
+![Destroy Resource](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/02.%20Update%20and%20Destroy%20Infra/images/faz-3.png?raw=true)
 
 ## Conclusion
 

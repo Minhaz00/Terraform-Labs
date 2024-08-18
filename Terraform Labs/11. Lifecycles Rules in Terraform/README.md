@@ -67,7 +67,7 @@ Initialize your Terraform workspace to set up the environment:
 ```sh
 terraform init
 ```
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/1.png?raw=true)
 
 ### Apply the Configuration
 
@@ -77,7 +77,7 @@ Apply the Terraform configuration to create the local file:
 terraform apply
 ```
 
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/2.png?raw=true)
 
 Type `yes` when prompted to confirm the creation of resources.
 
@@ -109,7 +109,7 @@ Apply the modified configuration:
 ```sh
 terraform apply
 ```
-![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/11.%20Lifecycles%20Rules%20in%20Terraform/images/3.png?raw=true)
 
 Observe that the file is not recreated, as the `ignore_changes` lifecycle rule is in effect.
 
