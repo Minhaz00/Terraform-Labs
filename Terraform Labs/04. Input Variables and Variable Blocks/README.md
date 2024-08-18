@@ -90,7 +90,7 @@ Let's create a configuration that uses input variables.
    terraform init
    ```
 
-   ![alt text](./images/image.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/04.%20Input%20Variables%20and%20Variable%20Blocks/images/image.png?raw=true)
 
 7. **Apply the Configuration**:
    ```sh
@@ -104,7 +104,7 @@ Let's create a configuration that uses input variables.
    ls
    ``` 
 
-   ![alt text](./images/image-7.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/04.%20Input%20Variables%20and%20Variable%20Blocks/images/image-7.png?raw=true)
 
 ## Variable Types
 
@@ -230,7 +230,7 @@ Terraform supports various variable types to handle different data structures. L
    
    Go to the root directory and use:
 
-    ![alt text](./images/image-9.png)
+    ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/04.%20Input%20Variables%20and%20Variable%20Blocks/images/image-9.png?raw=true)
 
 ### Task 2: Use Complex Variable Types
 
@@ -277,7 +277,7 @@ Terraform supports various variable types to handle different data structures. L
 4. **Verify the Result**:
    Go to the root directory and varify the result:
 
-   ![alt text](./images/image-8.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/04.%20Input%20Variables%20and%20Variable%20Blocks/images/image-8.png?raw=true)
 
 ## Conclusion
 

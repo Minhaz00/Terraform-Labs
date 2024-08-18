@@ -64,7 +64,7 @@ terraform apply
 
 When you run `terraform apply`, Terraform will prompt you to enter a value for the variable `filename`.
 
-![alt text](./images/image.png)
+![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/05.%20Using%20variables%20in%20terraform/images/image.png?raw=true)
 
 ### 3.2 Command Line Flags
 
