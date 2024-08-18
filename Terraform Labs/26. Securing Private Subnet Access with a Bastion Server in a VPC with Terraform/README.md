@@ -3,7 +3,7 @@
 
 In this lab, you will create a Virtual Private Cloud (VPC) with both public and private subnets. You will set up a NAT gateway for the private subnet, launch EC2 instances in both subnets, and then access the private EC2 instance by SSHing into the public instance first and using it as a jump host.
 
-![](./images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/logo.png?raw=true)
 
 ## Objectives
 
@@ -47,11 +47,11 @@ aws configure
 
 - **Explanation**: This command sets up your AWS CLI with the necessary credentials, region, and output format.
 
-![](./images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/5.png?raw=true)
 
 You will find the `AWS Access key` and `AWS Seceret Access key` on Lab description page,where you generated the credentials
 
-![](./images/6.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/6.png?raw=true)
 
 ### Create the Terraform Project Directory
 
@@ -238,7 +238,7 @@ resource "aws_instance" "private" {
    ls 
    ```
 
-   ![](./images/key.png)
+   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/key.png?raw=true)
 
 ## Step 5: Applying the Configuration
 
@@ -250,7 +250,7 @@ Initialize Terraform to download the necessary providers and set up your environ
 terraform init
 ```
 
-![](./images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/1.png?raw=true)
 
 ### Apply the Configuration
 
@@ -268,13 +268,13 @@ Type `yes` when prompted to confirm the creation of resources.
 
 In the VPC Dashboard in AWS Console, click on `my-vpc` we just created,here you will find resource map
 
-![](./images/res.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/res.png?raw=true)
 
 #### Verify the EC2 instances are running 
 
 In `EC2` Dashboard in AWS Console ,click on running instances ,you will find the instances we created 
 
-![](./images/ec2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/ec2.png?raw=true)
 
 ## Step 5: SSH into the Private EC2 Instance via the Public EC2 Instance
 
@@ -286,7 +286,7 @@ Use your SSH key to connect to the public instance:
 ssh -i ~/.ssh/id_rsa ubuntu@<public-instance-ip>
 ```
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/2.png?raw=true)
 
 Replace `<public-instance-ip>` with the public IP address of your public EC2 instance
 
@@ -297,7 +297,7 @@ Replace `<public-instance-ip>` with the public IP address of your public EC2 ins
 scp -i ~/.ssh/id_rsa ~/.ssh/id_rsa ubuntu@<public-instance-ip>:~/
 ```
 
-![](./images/3.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/3.png?raw=true)
 
 
 ### SSH into the Private Instance from the Public Instance
@@ -314,7 +314,7 @@ From public ec2 instance ssh into private ec2 instance
 ssh -i ~/id_rsa ubuntu@<private-instance-ip>
 ```
 
-![](./images/4.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/26.%20Securing%20Private%20Subnet%20Access%20with%20a%20Bastion%20Server%20in%20a%20VPC%20with%20Terraform/images/4.png?raw=true)
 
 Replace `<private-instance-ip>` with the private IP address of your private EC2 instance, which you can find in the AWS Management Console or Terraform output.
 

@@ -2,7 +2,7 @@
 
 In this lab, you'll learn how to deploy a simple AWS Lambda function using Terraform. AWS Lambda is a serverless compute service that lets you run code without provisioning or managing servers. You'll deploy a basic Lambda function that returns a "Hello, World!" message when invoked.
 
-![](./images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/logo.png?raw=true)
 
 ## Objectives
 
@@ -160,7 +160,7 @@ terraform apply
 
 Type `yes` when prompted to confirm the creation of resources.
 
-![](./images/4.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/4.png?raw=true)
 
 ## Step 4: Invoking the Lambda Function
 
@@ -175,11 +175,11 @@ aws lambda invoke \
     response.json
 ```
 
-![](./images/1.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/1.png?raw=true)
 
 This command invokes the Lambda function and saves the response to `response.json`.
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/2.png?raw=true)
 
 ### Check the Response
 
@@ -200,11 +200,11 @@ You should see the "Hello, World!" message in the response.
     - Name the test event (e.g., "TestEvent").
     - Use the default JSON template for the test event.
 
-    ![](./images/6.png)
+    ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/6.png?raw=true)
 
 5. **Click on Test** to invoke the function directly from the console.
 6. **View the results**: The output should show the "Hello, World!" message.
-   - ![](./images/5.png)
+   - ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/32.%20Deploying%20a%20Simple%20AWS%20Lambda%20Function%20Using%20Terraform/images/5.png?raw=true)
 
 
 
