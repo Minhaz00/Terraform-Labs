@@ -2,7 +2,7 @@
 
 In this lab, you will learn how to automate the deployment of an AWS infrastructure using Terraform and GitHub Actions. The infrastructure includes a Virtual Private Cloud (VPC) with a public subnet, an Internet Gateway (IGW), and an EC2 instance. The SSH public key used to access the EC2 instance will be securely managed using GitHub Secrets, and the Terraform state file will be stored in Terraform Cloud to ensure consistency and security across deployments.
 
-![](./images/logo.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/logo.png?raw=true)
 
 ## **Objectives**
 
@@ -56,7 +56,7 @@ terraform-aws-vpc-github-actions/
 - Choose **"CLI-driven workflow"**.
 - Name your workspace (e.g., "vpc-workspace") and click **"Create Workspace"**.
 
-![](./images/2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/2.png?raw=true)
 
 ### **3. Generate a Terraform Cloud API Token**
 - Go to **User Settings** (top-right corner).
@@ -64,7 +64,7 @@ terraform-aws-vpc-github-actions/
 - Name your token and click **"Create"**.
 - Copy the token and add it to your GitHub Secrets as `TF_CLOUD_TOKEN`.
 
-![](./images/image.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/image.png?raw=true)
 
 ### **Step 2: Setting Up the VPC and Public Subnet**
 
@@ -218,7 +218,7 @@ This generates a private key (`id_rsa`) and a public key (`id_rsa.pub`) in the `
      - **SSH_PUBLIC_KEY**: Paste the contents of your `id_rsa.pub` in `~/.ssh` directory.
      - **TF_CLOUD_TOKEN**: Add the Terraform Cloud API token as a secret.
 
-     ![](./images/1.png)
+     ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/1.png?raw=true)
 
 #### **2.2 Create a GitHub Actions Workflow**
 
@@ -305,22 +305,22 @@ git push origin main
    - Go to the "Actions" tab in your GitHub repository
    - Select the latest workflow run to monitor the deployment process.
 
-   ![](./images/4.png)
+   ![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/4.png?raw=true)
 
 ### **Step 4: Verify the Deployment**
 
 Once the deployment is complete, you can verify the infrastructure by logging into your AWS Management Console. Navigate to the VPC and EC2 dashboards to check if the resources have been created.
 
-![](./images/res.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/res.png?raw=true)
 
-![](./images/ec2.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/ec2.png?raw=true)
 
 You can also SSH into your EC2 instance using the private key:
 
 ```bash
 ssh -i ~/.ssh/id_rsa ubuntu@<ec2-public-ip>
 ```
-![](./images/5.png)
+![](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/29.%20Automating%20AWS%20VPC%20Deployment%20with%20EC2%20using%20GitHub%20Actions%20and%20Terraform%20Cloud/images/5.png?raw=true)
 
 ### **Conclusion**
 
