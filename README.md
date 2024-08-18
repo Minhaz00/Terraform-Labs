@@ -69,3 +69,18 @@
 ### Terraform Functions and Conditional Expression
 25. [Exploring and Using Terraform Built-In Functions](https://github.com/Minhaz00/Terraform-Labs/tree/main/Terraform%20Labs/25.%20Exploring%20and%20Using%20Terraform%20Built-In%20Functions)
 
+### Practical Labs with Terraform
+
+26. [Securing Private Subnet Access with a Bastion Server using Terraform]()
+
+27. [3-tier architecture using terraform]()
+
+28. [VPC peering using terraform]()
+
+29. [Github action AWS infra with terraform]()
+
+30. [AWS ALB using terraform]()
+
+31. [AWS Autoscaling using terraform]()
+
+32. [Deploying a Simple AWS Lambda Function Using Terraform]()
