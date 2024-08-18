@@ -136,7 +136,7 @@ Let's break down the `local.tf` file:
 4. **Verify the Resource**:
    Go to root folder to see the resource created.
 
-   ![alt text](image.png)
+   ![alt text](https://github.com/Minhaz00/Terraform-Labs/blob/main/Terraform%20Labs/01.%20Installation%20and%20HCL%20Basics/images/image.png?raw=true)
 
 ## Conclusion
 
